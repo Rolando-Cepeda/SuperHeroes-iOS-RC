@@ -13,6 +13,7 @@
 		6C8F29542C8886EA003B0503 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8F29532C8886EA003B0503 /* Base */; };
 		6C8F29562C8886EB003B0503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8F29552C8886EB003B0503 /* Assets.xcassets */; };
 		6C8F29592C8886EB003B0503 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8F29582C8886EB003B0503 /* Base */; };
+		6CBB8B922C8B186400B44B7C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBB8B912C8B186400B44B7C /* DetailViewController.swift */; };
 		6CCD559F2C899D830057FAD2 /* SuperHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD559E2C899D830057FAD2 /* SuperHero.swift */; };
 		6CCD55A12C899F940057FAD2 /* SuperHeroProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD55A02C899F940057FAD2 /* SuperHeroProvider.swift */; };
 		6CCD55A32C89A6820057FAD2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD55A22C89A6820057FAD2 /* Constants.swift */; };
@@ -30,6 +31,7 @@
 		6C8F29552C8886EB003B0503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8F29582C8886EB003B0503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8F295A2C8886EB003B0503 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CBB8B912C8B186400B44B7C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6CCD559E2C899D830057FAD2 /* SuperHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHero.swift; sourceTree = "<group>"; };
 		6CCD55A02C899F940057FAD2 /* SuperHeroProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroProvider.swift; sourceTree = "<group>"; };
 		6CCD55A22C89A6820057FAD2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				6CCD55A82C89CFBF0057FAD2 /* ListViewController.swift */,
+				6CBB8B912C8B186400B44B7C /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				6CCD559F2C899D830057FAD2 /* SuperHero.swift in Sources */,
 				6CCD55AD2C89D5C00057FAD2 /* UIImageViewExtension.swift in Sources */,
 				6CCD55A32C89A6820057FAD2 /* Constants.swift in Sources */,
+				6CBB8B922C8B186400B44B7C /* DetailViewController.swift in Sources */,
 				6CCD55A92C89CFBF0057FAD2 /* ListViewController.swift in Sources */,
 				6CCD55A72C89C97D0057FAD2 /* SuperHeroViewCell.swift in Sources */,
 			);
