@@ -9,6 +9,7 @@ import Foundation
 
 class SuperHeroProvider {
     
+    //LLamada a internet con funcion lambda
     static func findSuperHeroesByName(_ name: String,
                                       withResult: @escaping ([SuperHero]) -> Void) {
         guard let url = URL(string:
@@ -31,6 +32,20 @@ class SuperHeroProvider {
             }
         }
         task.resume()
+    }
+    
+    // LLamada a internet con async await, luego en el ListViewController realizamos la llamada
+    // a esta funcion.
+    static func findSuperHeroesByName(_ name: String) async throws -> [SuperHero] {
+        guard let url = URL(string: "\(Constants.BASE_URL)search/\(name)") else {
+            print("URL not valid")
+            return []
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        let result = try JSONDecoder().decode(SuperHeroResponse.self, from: data)
+        return result.results
     }
 }
 

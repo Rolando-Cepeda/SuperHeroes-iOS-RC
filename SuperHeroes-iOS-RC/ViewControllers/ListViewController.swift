@@ -21,12 +21,22 @@ class ListViewController: UIViewController, UITableViewDataSource {
     
         tableView.dataSource = self
         
-        SuperHeroProvider.findSuperHeroesByName("Super", withResult: { results in
+        /*SuperHeroProvider.findSuperHeroesByName("Super", withResult: { results in
             self.superHeroList = results
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        })
+        }) */
+        
+            // Aqui hacemos la llamada a la funcion await con async, que esta en SuperHeroProvider.
+        Task {
+            let results = try? await SuperHeroProvider.findSuperHeroesByName("Super")
+            
+            self.superHeroList = results!
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
