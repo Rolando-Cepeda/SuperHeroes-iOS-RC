@@ -18,10 +18,34 @@ struct SuperHeroResponse: Codable {
 struct SuperHero: Codable {
     let id: String
     let name: String
-    let image: Image
+    let powerstats: Stats
+    let biography:Biography
+    //let work:Work
+    var image: Image
 }
 
 struct Image: Codable {
     let url: String
 }
 
+struct Biography: Codable {
+    let realName: String
+    let placeOfBirth: String
+    let publisher: String
+    let alignment: String
+    
+    enum CodingKeys: String, CodingKey {
+        case publisher, alignment
+        case realName = "full-name"
+        case placeOfBirth = "place-of-birth"
+    }
+}
+
+struct Stats: Codable {
+    let intelligence: String?
+    let strength: String?
+    let speed: String?
+    let durability: String?
+    let power: String?
+    let combat: String?
+}
